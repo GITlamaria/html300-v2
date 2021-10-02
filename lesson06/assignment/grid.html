@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- bootstrap css link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- bootstrap JS link -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+
+        <!-- navigation bar with links to 4 pages -->
+        <nav class="navbar navbar-expand-sm bg-dark justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Grid -->
+        <div class="container-fluid text-center align-middle">
+ 
+            <!-- 3 columns of equal width -->
+            <div class="row top">
+                <div class="col bg-info">
+                    top
+                </div>
+                <div class="col bg-info">
+                    top
+                </div>
+                <div class="col bg-info">
+                    top
+                </div>
+            </div>
+
+            <!-- 2 columns, 1st expands 3 columns, 2nd expands 9 columns -->
+            <div class="row middle">
+                <div class="col-3 bg-primary">
+                    col1
+                </div>
+                <div class="col-9 bg-success">
+                    col2
+                </div>
+            </div>
+
+            <!-- 3 columns of equal width
+            *columns will display on same row in large viewport
+            *staggered in medium viewport
+            *stacked in small viewport
+            -->
+            <div class="row bottom">
+                <div class="col-sm-4 bg-warning" >
+                    small
+                </div>
+                <div class="col-md-4 bg-secondary">
+                    medium
+                </div>
+                <div class="col-lg-4 bg-danger">
+                    large
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

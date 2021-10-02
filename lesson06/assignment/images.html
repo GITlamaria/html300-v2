@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Images Page</title>
+
+    <!-- link to css stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+
+            <!-- bootstrap css link -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+            <!-- bootstrap JS link -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navigation bar with links to 4 pages -->
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-end">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="text-center images-heading">
+                Top 5 Halloween movies
+            </h1>
+        </div>
+    
+        <!-- carousel -->
+        <div id="movies" class="carousel slide" data-ride="carousel">
+            
+            <!-- indicators so user knows how many slides there are and which one has current focus -->
+            <ul class="carousel-indicators">
+                <li data-target="#movies" class="active"></li>
+                <li data-target="#movies"></li>
+                <li data-target="#movies"></li>
+                <li data-target="#movies"></li>
+                <li data-target="#movies"></li>
+            </ul>
+
+            <!-- creates the slideshow of the movies-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./images/scream1.jfif" alt="Scream movie">
+                    <div class="carousel-caption">
+                        <h6>#1 - Scream (1996)</h56>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/pumpkin.jfif" alt="It's the Great Pumpkin movie">
+                    <div class="carousel-caption">
+                        <h6>#2 - It's the Great Pumpkin (1966)</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/adams-family.jfif" alt="The Addams Family movie">
+                    <div class="carousel-caption">
+                        <h6># - The Addams Family (1991)</h6>
+                    </div>
+                </div>
+            <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/omen.jfif" alt="The Omen movie">
+                    <div class="carousel-caption">
+                        <h6>#4 - The Omen (1976)</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/hocus.jfif" alt="Hocus Pocus movie">
+                    <div class="carousel-caption">
+                        <h6>#5 - Hocus Pocus (1993)</h6>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" data-slide="prev" href="#movies">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" data-slide="next" href="#movies">
+                <span class="carousel-control-next-icon"> </span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
