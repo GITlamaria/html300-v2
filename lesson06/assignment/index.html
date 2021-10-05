@@ -5,11 +5,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- bootstrap css link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- bootstrap JS link -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
         <main class="main">
-          
+            <!-- navigation bar with links to 4 pages -->
+            <nav class="navbar navbar-expand-sm bg-dark justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="images.html">Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accordion.html">Accordion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grid.html">Grid</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- full-width jumbotron -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 id="scary" class="text-dark" data-toggle="tooltip" title="BEWARE!">
+                        Top 5 scary movies to watch this Halloween...
+                    </h1>
+                    <h4>
+                        To find out...click...the...'Images' link on the navigation bar!
+                    </h4>
+                </div>
+            </div>
+
+            <!-- button with a tooltip -->
+            <div>
+                <button id="button" class="btn btn-dark text-warning" 
+                data-toggle="tooltip" title="Beware!" data-placement="bottom">???</button>
+            </div>
+            <!-- 
+                Nav bar, navigate between 4 pages
+                pg1, landing page, w/some contents
+                pg2, images page: images should adjust to dimensions of the screen, responsive/fluid bootstrap images
+                pg3, uses an accordion
+                pg4, uses grid system; at least 3 bootstrap sizes, not a complex layout
+                ***tooltips or popovers must be used at least once on one of the pages
+                bonus:  use jumbotron on the landing page
+                xtra bonus: use a carousel slider
+             -->
         </main>
+
+        <script src="./js/tooltip.js"></script>
     </body>
 </html>
