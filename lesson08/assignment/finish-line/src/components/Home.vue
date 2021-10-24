@@ -11,12 +11,30 @@
     <b-container fluid>
         <b-row>
             <b-col cols="2">
-                <h3>
-                    run clubs
-                </h3>
+                <b-container class="container">
+     <b-row>
+       <b-col>
+        <b-button v-b-toggle.collapse class="clubs">PNW Running Clubs</b-button>
+       </b-col>
+     </b-row>
+        <b-col>
+          <b-collapse visible id="collapse">
+            <b-card class="clubs">
+              <ul>
+                <!-- iterate through the clubs array to fill the collapsible menu -->
+                <li v-for="(club, key) in clubs" :key="club.id">
+                  
+                  <a :v-bind:href="club.link">{{key}}</a>
+                  
+                  </li>
+              </ul>
+            </b-card>
+          </b-collapse>
+        </b-col>
+   </b-container> 
             
             </b-col>
-            <b-col cols="10">
+            <b-col cols="10" fluid-grow>
                 <b-jumbotron header="Crossing the Finish Line!"/>
                 <b-carousel
                         id="runner-carousel"
@@ -34,7 +52,6 @@
         </b-row>
     </b-container>
   </div>
-
 </template>
 
 <script>
@@ -42,6 +59,8 @@ export default {
   name: 'Home',
   data() {
     return {
+
+     
       /* array of objects */
         runners: [
           {
@@ -64,6 +83,40 @@ export default {
         },
 
       ],
+
+      /* clubs object */
+      clubs: {
+        
+        'Club Northwest': {id: 1, 
+            link: "https://www.clubnorthwest.org/",
+            image: [
+            require('@/assets/images/Club+Northwest+logo_transparent.png'), 
+            ]},
+
+        'Running in the USA': {id: 2,  
+            link: "https://www.runningintheusa.com/club/list/wa",
+            image: [
+            require('@/assets/images/run-usa.gif'), 
+            ]},
+
+        'Seattle Running Club': {id: 2,    
+            link: "https://seattlerunningclub.org",
+            image: [
+            require('@/assets/images/seattle-running.png'), 
+            ]},
+
+        'Cascade Run Club Seattle': {id: 2,   
+            link: "https://cascaderunclub.com/locations/cascade-run-club-seattle",
+            image: [
+            require('@/assets/images/run-cascade.png'), 
+            ]},
+
+        'Sonic Boom Running Club': {id: 2,     
+            link: "https://sonicboomrunningclub.com/",
+            image: [
+            require('@/assets/images/sonic-boom.jpg'), 
+            ]},
+        },
     }
   }
 }

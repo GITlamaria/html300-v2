@@ -1,23 +1,10 @@
 <template>
  <div>
      <b-jumbotron fluid header="Current Record Holders"></b-jumbotron>
+     
  <div class="row">
-    <!-- <b-carousel
-    id="race-carousel"
-      v-model="slide"
-      indicators
-      :interval="4000"
-    > -->
-
-<!-- iterate through the movies array to display the images in the carousel -->
-      <!-- <b-carousel-slide class="race-slide" v-for="(race, index) in races" :key='index'
-          :img-src="race.image">
-          
-      </b-carousel-slide>
-    </b-carousel> -->
-
-
-   
+    
+    <!--iterate through the races array to display data for each card -->
     <b-card class="cards col-md-6 text-right" img-height="350"
     v-for="(race, races) in races" :key='races'
           
@@ -37,6 +24,9 @@ export default {
  
   data() {
     return {
+
+     
+
       /* array of objects */
         races: [
             {
