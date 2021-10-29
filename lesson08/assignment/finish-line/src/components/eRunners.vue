@@ -1,27 +1,61 @@
 <template>
- <div>
+ <b-container>
      <b-jumbotron fluid header="Current Record Holders"></b-jumbotron>
      
- <div class="row">
-    
-    <!--iterate through the races array to display data for each card -->
-    <b-card class="cards col-md-6 text-right" img-height="350"
-    v-for="(race, races) in races" :key='races'
-          
-          :title="race.firstName + ' ' + race.lastName"
-          :sub-title="race.country"
-          :header="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time"
-          :img-src="race.image"
 
-        >
-</b-card>
-  </div>
-  </div>
+
+  <b-card v-for="race in races" :key="race.id"
+  :title="race.firstName + ' ' + race.lastName"
+  :sub-title="race.country"
+  :footer="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time">
+ 
+<Images  :alt="race.gender + ' runner'" 
+  :image="race.image" />
+ 
+
+  </b-card>
+  
+
+ 
+
+
+
+
+
+
+
+
+
+        <!-- <div class="row"> -->
+            
+            <!--iterate through the races array to display data for each card -->
+            <!-- <b-card class="cards col-md-6 text-right" img-height="350"
+            v-for="(race, races) in races" :key='races'
+                  
+                  :title="race.firstName + ' ' + race.lastName"
+                  :sub-title="race.country"
+                  :header="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time"
+                  :img-src="race.image"
+
+                >
+            </b-card>
+          </div> -->
+
+          <!-- use Images component -->
+          
+  </b-container>
 </template>
 
 <script>
+
+import Images from './Images.vue'
+
 export default {
- 
+  //register component
+components: {
+  Images,
+},
+
   data() {
     return {
 
@@ -76,6 +110,7 @@ export default {
                 image: [
                 require('@/assets/images/10k_male.jpg'),
                 ],
+  
             },
             {
                 gender: "Female",
