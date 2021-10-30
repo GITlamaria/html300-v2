@@ -17,7 +17,7 @@
 
 //export component
 export default {
-    name: 'Images',
+    name: 'Image',
 
     props: {
        

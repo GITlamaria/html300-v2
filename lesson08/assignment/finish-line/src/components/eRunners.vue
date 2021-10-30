@@ -4,16 +4,29 @@
      
 
 
-  <b-card v-for="race in races" :key="race.id"
+
+<Race v-on:click="addBorder" v-for="race in races" :key="race.id" :race="race"
+/>
+
+
+
+
+
+
+
+
+  <!-- <b-card v-for="race in races" :key="race.id"
   :title="race.firstName + ' ' + race.lastName"
   :sub-title="race.country"
-  :footer="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time">
+  :footer="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time"> -->
  
-<Images  :alt="race.gender + ' runner'" 
-  :image="race.image" />
- 
+<!-- <Image  :alt="race.gender + ' runner'" 
+  :image="race.image" /> -->
+ <!-- <Image 
+ :image="race.image"
+ />
 
-  </b-card>
+  </b-card> -->
   
 
  
@@ -48,22 +61,21 @@
 
 <script>
 
-import Images from './Images.vue'
+// import Image from './Delete_Image.vue'
+import Race from './Race.vue'
 
 export default {
   //register component
 components: {
-  Images,
+  Race,
 },
 
   data() {
     return {
-
-     
-
       /* array of objects */
         races: [
             {
+              id: "1",
                 gender: "Female",
                 firstName: "Tirunesh",
                 lastName: "Dibaba",
@@ -71,11 +83,11 @@ components: {
                 time: "14:06.62",
                 year: "2020",
                 country: "Ethiopia",
-                image: [
-                require('@/assets/images/5k_female.jpg'),
-                ],
+                src: require('@/assets/images/5k_female.jpg'),
+                
             },
             {
+              id: "2",
                 gender: "Male",
                 firstName: "Joshua",
                 lastName: "Cheptegei",
@@ -83,11 +95,12 @@ components: {
                 time: "12:35.36",
                 year: "2020",
                 country: "Uganda",
-                image: [
+                src: 
                 require('@/assets/images/5k_male.jpg'),
-                ],
+                
             },
             {
+              id: "3",
                 gender: "Female",
                 firstName: "Sifan",
                 lastName: "Hassan",
@@ -95,11 +108,12 @@ components: {
                 time: "29:06.82",
                 year: "2021",
                 country: "Ethiopia",
-                image: [
+                src: 
                 require('@/assets/images/10k_female.jpg'),
-                ],
+                
             },
             {
+                id: "4",
                 gender: "Male",
                 firstName: "Joshua",
                 lastName: "Cheptegei",
@@ -107,24 +121,26 @@ components: {
                 time: "26:11.00",
                 year: "2020",
                 country: "Uganda",
-                image: [
+                src: 
                 require('@/assets/images/10k_male.jpg'),
-                ],
+                
   
             },
             {
+                id: "5",
                 gender: "Female",
-                firstName: "Ababel ",
-                lastName: "Yeshaneh ",
+                firstName: "Ababel",
+                lastName: "Yeshaneh",
                 race: "Half-Marathon",
                 time: "1:04:31",
                 year: "2021",
                 country: "Ethiopia",
-                image: [
+                src: 
                 require('@/assets/images/half_female.jpg'),
-                ],
+                
             },
             {
+                id: "6",
                 gender: "Male",
                 firstName: "Kibiwott",
                 lastName: "Kandie",
@@ -132,23 +148,25 @@ components: {
                 time: "57:32:00",
                 year: "2020",
                 country: "Kenya",
-                image: [
+                src: 
                 require('@/assets/images/half_male.jpg'),
-                ],
+                
             },
             {
+                id: "7",
                 gender: "Female",
-                firstName: "Mary ",
-                lastName: "Keitany ",
+                firstName: "Mary",
+                lastName: "Keitany",
                 race: "Full-Marathon",
                 time: "2:17:01",
                 year: "2017",
                 country: "Kenya",
-                image: [
+                src: 
                 require('@/assets/images/full_female.jpg'),
-                ],
+                
             },
             {
+                id: "8",
                 gender: "Male",
                 firstName: "Eliud ",
                 lastName: "Kipchoge",
@@ -156,11 +174,18 @@ components: {
                 time: "2:01:39",
                 year: "2018",
                 country: "Kenya",
-                image: [
+                src: 
                 require('@/assets/images/full_male.jpg'),
-                ],
+                
             }
       ],
+    }
+  },
+  methods: {
+    onclick() {
+      return {
+      //add style here
+      }
     }
   }
 }
@@ -168,4 +193,5 @@ components: {
 
 <!-- link to stylesheet -->
 <style src="@/assets/styles/appStyle.css" />
+
 

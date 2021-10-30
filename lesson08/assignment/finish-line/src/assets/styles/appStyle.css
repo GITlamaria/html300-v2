@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=appStyle.css.map */
+.r1, .r2, .r3 {
+  margin-bottom: 3rem;
+}
+
+.home {
+  background-color: blue;
+}
+/*# sourceMappingURL=appStyle.css.map */

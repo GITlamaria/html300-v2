@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+  
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-nav>
         <b-nav-item>
@@ -21,6 +22,7 @@
     </b-navbar>
 
     <router-view />     <!-- this is where the components will render when the links are triggered -->
+   
   </div>
 </template>
 

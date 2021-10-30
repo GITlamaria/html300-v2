@@ -1,6 +1,6 @@
 
 <template>
-  <b-container class="home">
+  <b-container fluid class="home">
     <b-row>
       <b-col cols="3">
           <!-- Running Clubs - left pane -->
@@ -36,7 +36,7 @@
       </b-col>
       <b-col cols="9" class="home-main">
         <b-jumbotron header="Crossing the Finish Line!" />
-        <b-row>
+        <b-row  class="r1">
           <b-col>
             <b-card class="m text-left" border-variant="primary" :img-src="imageFriend" :img-alt="altFriend" img-right >
               <h3> {{ titleFriend }}</h3>
@@ -50,7 +50,7 @@
             </b-img> -->
           </b-col>
         </b-row>
-        <b-row>
+        <b-row class="r2">
           <b-col>
 
             <b-card :img-src="imageSolo" :img-alt="altSolo" img-left>
@@ -65,7 +65,7 @@
             </b-img> -->
           </b-col>
         </b-row>
-        <b-row>
+        <b-row class="r3">
           <b-col>
 
             <b-card :img-src="imageSmile" :img-alt="altSmile" img-center class="text-center">
@@ -96,11 +96,11 @@ export default {
         altFriend: "2 people running",
         imageFriend:  [require('@/assets/images/run-friend.jpeg')],
 
-        titleSolo: "Bond With a Friend",
+        titleSolo: "Let your mind wonder...",
         altSolo: "2 people running",
         imageSolo:  [require('@/assets/images/run-solo.jpg')],
         
-        titleSmile: "Bond With a Friend",
+        titleSmile: "What a Feeling...",
         altSmile: "2 people running",
         imageSmile:  [require('@/assets/images/run-smile.jpeg')],
         
