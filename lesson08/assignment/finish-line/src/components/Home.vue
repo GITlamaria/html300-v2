@@ -4,7 +4,7 @@
     <b-row>
       <b-col cols="3">
           <!-- Running Clubs - left pane -->
-          
+
      <b-row>
        <b-col>
         <b-button v-b-toggle.collapse class="clubs">PNW Running Clubs</b-button>
@@ -36,6 +36,11 @@
       </b-col>
       <b-col cols="9" class="home-main">
         <b-jumbotron header="Crossing the Finish Line!" />
+
+
+
+
+
         <b-row  class="r1">
           <b-col>
             <b-card class="m text-left" border-variant="primary" :img-src="imageFriend" :img-alt="altFriend" img-right >
@@ -81,13 +86,25 @@
         </b-row>
       </b-col>
     </b-row>
+
+    <div>
+      <p v-bind:class="{ alert: showAlert }" >HELLO!</p>
+    </div>
+   
+
    
   </b-container>
 </template>
 
 <script>
+
+// import Image from './Image.vue'
 export default {
-  name: 'Home',
+  // name: 'Home',
+
+  components: {
+    // Image,
+  },
   data() {
     return {
 
@@ -103,31 +120,6 @@ export default {
         titleSmile: "What a Feeling...",
         altSmile: "2 people running",
         imageSmile:  [require('@/assets/images/run-smile.jpeg')],
-        
-    
-
-      /* array of objects */
-      //   runners: [
-      //     {
-      //     description: "Let your mind wonder...",
-      //     image: [
-      //     require('@/assets/images/run-solo.jpg'),
-      //     ],
-      //   },
-      //   {
-      //     description: "Bond with a friend...",
-      //     image: [
-      //       require('@/assets/images/run-friend.jpeg'),
-      //     ],
-      //   },
-      //   {
-      //     description: "What a Feeling...",
-      //     image: [
-      //       require('@/assets/images/run-smile.jpeg'),
-      //     ],
-      //   },
-
-      // ],
 
       /* clubs object */
       clubs: {
@@ -162,10 +154,20 @@ export default {
             require('@/assets/images/sonic-boom.jpg'), 
             ]},
         },
+
+        showAlert: true
     }
   }
 }
 </script>
 
-<!-- link to stylesheet -->
-<style src="@/assets/styles/appStyle.css" />
+<!-- link to stylesheet 
+<style src="@/assets/styles/appStyle.css" /> -->
+<style scoped>
+.alert {
+  background-color: red;
+  width: 100%;
+  height: 30px;
+}
+
+</style>

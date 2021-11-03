@@ -1,17 +1,6 @@
 <template>
-    <div >
-        <!-- <div class="product-inner">
-            <div class="product-text-wrap">
-                <h2 class="bg-text">{{ race.bg-text }}</h2>
-            </div>
-            <div class="race-image-wrap">
-                <h1>{{ Race.time }}</h1>
-                <b-img :img-src="race.src" class="image" />
-            </div>
-        </div> -->
-
-
-        <b-card class="card" 
+    <div >  
+        <b-card class="card"
             :title="race.firstName + ' ' + race.lastName + ', ' + race.country"
             :img-src="race.src"
             :img-alt="race.gender + 'Runner'"
@@ -29,18 +18,33 @@
                     <b-col>
                         Year:  {{race.year}}
                     </b-col>
-                </b-row>
-                
-                <div>
-                    
+                </b-row> 
+                <div>     
                 </div>
-
             </div>
-        </b-card>
-
+        </b-card> 
 
     </div>
 </template>
+
+
+<script>
+
+// import Image from './Image.vue'
+
+export default {
+    name: 'race',
+    props: ['race'],
+
+
+//register component
+components: {
+//   Image,
+},
+}
+</script>
+
+
 
 <style scoped>
 .race-details {
@@ -59,12 +63,5 @@
 .race-details {
     margin-bottom: 2rem;
 }
+
 </style>
-
-<script>
-
-export default {
-    name: 'race',
-    props: ['race']
-}
-</script>

@@ -1,61 +1,11 @@
 <template>
  <b-container>
      <b-jumbotron fluid header="Current Record Holders"></b-jumbotron>
-     
-
-
-
-<Race v-on:click="addBorder" v-for="race in races" :key="race.id" :race="race"
-/>
-
-
-
-
-
-
-
-
-  <!-- <b-card v-for="race in races" :key="race.id"
-  :title="race.firstName + ' ' + race.lastName"
-  :sub-title="race.country"
-  :footer="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time"> -->
- 
-<!-- <Image  :alt="race.gender + ' runner'" 
-  :image="race.image" /> -->
- <!-- <Image 
- :image="race.image"
- />
-
-  </b-card> -->
-  
-
- 
-
-
-
-
-
-
-
-
-
-        <!-- <div class="row"> -->
-            
-            <!--iterate through the races array to display data for each card -->
-            <!-- <b-card class="cards col-md-6 text-right" img-height="350"
-            v-for="(race, races) in races" :key='races'
-                  
-                  :title="race.firstName + ' ' + race.lastName"
-                  :sub-title="race.country"
-                  :header="'Race:  ' + race.race + '  *  ' + 'Year:  ' + race.year + '  *  ' + 'Time:  ' + race.time"
-                  :img-src="race.image"
-
-                >
-            </b-card>
-          </div> -->
-
-          <!-- use Images component -->
-          
+        <div>
+            <!-- <Race v-bind:class="{alert: showAlert }" v-for="race in races" :key="race.id" :race="race" -->
+              <Race v-for="race in races" :key="race.id" :race="race"
+        />
+        </div>
   </b-container>
 </template>
 
@@ -73,7 +23,8 @@ components: {
   data() {
     return {
       /* array of objects */
-        races: [
+       
+       races: [
             {
               id: "1",
                 gender: "Female",
@@ -179,19 +130,32 @@ components: {
                 
             }
       ],
+      // showAlert: true
+
+
     }
   },
+
   methods: {
-    onclick() {
-      return {
-      //add style here
-      }
+    
+
     }
   }
-}
+
+
 </script>
 
 <!-- link to stylesheet -->
-<style src="@/assets/styles/appStyle.css" />
+<!--style src="@/assets/styles/appStyle.css" /-->
+<style scoped>
+  .setBackground {
+    background: "blue";
+  }
+
+  button {
+    width: 4rem;
+    height: 2rem;
+  }
+</style>
 
 

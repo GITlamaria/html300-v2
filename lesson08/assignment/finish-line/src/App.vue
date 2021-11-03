@@ -22,17 +22,18 @@
     </b-navbar>
 
     <router-view />     <!-- this is where the components will render when the links are triggered -->
-   
   </div>
 </template>
 
 <script>
 // import Home from './components/Home.vue'
+// import Training from './components/Training.vue'
+
 
 export default {
   name: 'App',
   components: {
-    // Home
+    // Image,
   }
 }
 </script>
