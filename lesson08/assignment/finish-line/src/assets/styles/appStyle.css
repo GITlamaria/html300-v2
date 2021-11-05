@@ -1,4 +1,12 @@
+.home, .card {
+  background-color: grey;
+}
+
 .r1, .r2, .r3 {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  border: none !important;
 }
 /*# sourceMappingURL=appStyle.css.map */

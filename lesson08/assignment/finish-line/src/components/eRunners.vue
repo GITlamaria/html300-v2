@@ -1,11 +1,17 @@
 <template>
  <b-container>
      <b-jumbotron fluid header="Current Record Holders"></b-jumbotron>
-        <div>
+     
+     <div class="row">
+        <div class="col-md-6" v-for="race in races" :key="race.id" >
             <!-- <Race v-bind:class="{alert: showAlert }" v-for="race in races" :key="race.id" :race="race" -->
-              <Race v-for="race in races" :key="race.id" :race="race"
+              <Race :race="race"
         />
         </div>
+    
+     </div>
+
+
   </b-container>
 </template>
 
@@ -156,6 +162,10 @@ components: {
     width: 4rem;
     height: 2rem;
   }
+  .row {
+        
+  }
+  
 </style>
 
 

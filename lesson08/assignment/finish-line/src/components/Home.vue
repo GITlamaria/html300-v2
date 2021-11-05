@@ -36,23 +36,19 @@
       </b-col>
       <b-col cols="9" class="home-main">
         <b-jumbotron header="Crossing the Finish Line!" />
-
-
-
-
-
         <b-row  class="r1">
           <b-col>
-            <b-card class="m text-left" border-variant="primary" :img-src="imageFriend" :img-alt="altFriend" img-right >
+            <b-card class="m text-left" :img-src="imageFriend" :img-alt="altFriend" img-right >
+              
               <h3> {{ titleFriend }}</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vel temporibus ducimus eligendi quos obcaecati eos earum quia saepe dolor delectus aut quas rem, quo veritatis? Veniam laborum, nam modi, tenetur velit alias dolorum incidunt dolor rem sed neque dicta ipsa eius amet atque eveniet iusto quod facere exercitationem laudantium.
               </p>
             </b-card>
 
-            <!-- <h2> {{ friendTitle }}</h2>
+            <h2> {{ friendTitle }}</h2>
             <b-img v-bind="friendProps" rounded right>
-            </b-img> -->
+            </b-img>
           </b-col>
         </b-row>
         <b-row class="r2">
@@ -61,8 +57,10 @@
             <b-card :img-src="imageSolo" :img-alt="altSolo" img-left>
               <h3> {{ titleSolo }}</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit error quia doloremque ut perferendis. Vero sit voluptatem, saepe animi officiis ea molestias ab, sed sint eum, voluptatibus omnis reprehenderit? Perspiciatis pariatur omnis quisquam. Veritatis asperiores rerum aperiam nemo animi repudiandae enim culpa, esse assumenda. Quos adipisci soluta nam dolore commodi.
-
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae quasi inventore dignissimos, repellat hic temporibus repudiandae laudantium fuga saepe praesentium ab porro, nisi, esse doloribus quas cumque. Eius quos doloribus suscipit enim veritatis fugiat tenetur quo! Ex labore voluptatem, voluptatum atque impedit illum error, reiciendis magnam et ullam a sint.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat maiores ea provident illo facilis consequatur incidunt cupiditate, inventore similique voluptates, sapiente laudantium eum commodi veritatis quae ipsum repellendus quisquam ipsa.
               </p>
             </b-card>
             <!-- <h2>{{ soloTitle }}</h2>
@@ -85,42 +83,35 @@
           </b-col>
         </b-row>
       </b-col>
-    </b-row>
-
-    <div>
-      <p v-bind:class="{ alert: showAlert }" >HELLO!</p>
-    </div>
-   
-
-   
+    </b-row> 
   </b-container>
 </template>
 
 <script>
 
-// import Image from './Image.vue'
 export default {
   // name: 'Home',
 
   components: {
-    // Image,
+    // ImageComponent
   },
+  
   data() {
     return {
-
-    //  friendProps: {
-        titleFriend: "Bond With a Friend",
-        altFriend: "2 people running",
-        imageFriend:  [require('@/assets/images/run-friend.jpeg')],
-
-        titleSolo: "Let your mind wonder...",
-        altSolo: "2 people running",
-        imageSolo:  [require('@/assets/images/run-solo.jpg')],
+     
+            titleFriend: "Bond With a Friend",
+            altFriend: "2 people running",
+            imageFriend:  require('../assets/images/run-friend.jpeg'),
         
-        titleSmile: "What a Feeling...",
-        altSmile: "2 people running",
-        imageSmile:  [require('@/assets/images/run-smile.jpeg')],
-
+            titleSolo: "Let your mind wonder...",
+            altSolo: "1 person running",
+            imageSolo:  require('../assets/images/run-solo.jpg'),
+      
+            titleSmile: "What a Feeling...",
+            altSmile: "happy kid running",
+            imageSmile:  require('../assets/images/run-smile.jpeg'),
+                
+            
       /* clubs object */
       clubs: {
         
@@ -161,13 +152,5 @@ export default {
 }
 </script>
 
-<!-- link to stylesheet 
-<style src="@/assets/styles/appStyle.css" /> -->
-<style scoped>
-.alert {
-  background-color: red;
-  width: 100%;
-  height: 30px;
-}
-
-</style>
+<!-- link to stylesheet  -->
+<style src="@/assets/styles/appStyle.css" />

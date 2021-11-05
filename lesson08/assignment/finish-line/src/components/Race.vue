@@ -1,11 +1,11 @@
 <template>
-    <div >  
-        <b-card class="card"
+    <div > 
+        
+        <b-card class="race-card" 
             :title="race.firstName + ' ' + race.lastName + ', ' + race.country"
-            :img-src="race.src"
-            :img-alt="race.gender + 'Runner'"
-            
+           
         >
+            <ImageComponent :img-data="race" />
             <div class="race-details">
 
                 <b-row>
@@ -18,33 +18,49 @@
                     <b-col>
                         Year:  {{race.year}}
                     </b-col>
+                
                 </b-row> 
                 <div>     
                 </div>
             </div>
         </b-card> 
-
     </div>
 </template>
 
 
 <script>
 
-// import Image from './Image.vue'
+import ImageComponent from './ImageComponent.vue'
 
 export default {
     name: 'race',
     props: ['race'],
+   
 
 
-//register component
-components: {
-//   Image,
-},
+    //register component
+    components: {
+    ImageComponent,
+    },
+
+    methods: {
+        
+    },
+
+    data() {
+        return {
+
+            // styleObject: {
+            //     color: 'red',
+            //     fontSize: '30px'
+            // }
+            // status: 'success'
+           
+        }
+    }
 }
+
 </script>
-
-
 
 <style scoped>
 .race-details {
@@ -56,7 +72,7 @@ components: {
 .card {
     background-color: #f1f3eb; 
     margin-top: 2rem;
-    width: 600px;
+
     /* padding: 2rem; */
     
 }
