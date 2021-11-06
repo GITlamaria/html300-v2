@@ -3,6 +3,7 @@
   <header-slot>
       <!-- headerslot content will display here -->
   </header-slot>
+  
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-nav>
         <b-nav-item>
@@ -24,7 +25,8 @@
     </b-navbar>
 
     <router-view />     <!-- this is where the components will render when the links are triggered -->
-    <footer-slot>
+    
+    <footer-slot>       <!-- footer slot content -->
     </footer-slot>
   </div>
 </template>
@@ -32,22 +34,16 @@
 <script>
 import HeaderSlot from './components/HeaderSlot.vue'
 import FooterSlot from './components/FooterSlot.vue'
-// import Home from './components/Home.vue'
-// import Training from './components/Training.vue'
-
 
 export default {
   name: 'App',
   components: {
     HeaderSlot,
     FooterSlot,
-    // Image,
+    
   }
 }
 </script>
 
-<style scoped src="@/assets/styles/appStyle.css">
-
-
-
-</style>
+<!-- link to global stylesheet -->
+<style scoped src="@/assets/styles/appStyle.css" />

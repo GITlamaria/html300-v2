@@ -1,5 +1,4 @@
 
-
 <template>
   <b-container fluid class="home">
     <b-row>
@@ -14,27 +13,19 @@
         <b-col>
           <b-collapse visible id="collapse">
             <b-card class="clubs">
-              
                 <!-- iterate through the clubs array to fill the collapsible menu -->
                 <p v-for="(club, key) in clubs" :key="club.id">
                   <b-row>
-                    
-
-                    
                     <b-col>
-<a :href="club.link">{{key}}</a>
+                      <a :href="club.link">{{key}}</a>
                     </b-col>
                   </b-row>
-                  
-                  
-                  
-                  </p>
-              
+                </p>
             </b-card>
           </b-collapse>
         </b-col>
-   
       </b-col>
+
       <b-col cols="9" class="home-main">
         <b-row  class="r1">
           <b-col>
@@ -146,33 +137,13 @@ export default {
 }
 </script>
 
-<!-- link to stylesheet 
-<style src="@/assets/styles/appStyle.css" /> -->
-
+<!-- link to stylesheet -->
+<style src="@/assets/styles/appStyle.css" />
 <style scoped>
-
-  .clubs {
-    background-color: #9eb5c4;
-  }
-  .home {
-    color: #f3e230;
-  }
-  .home-main {
-      
+.home-main {
       background-image: url('../assets/images/main-content.jpeg'); 
       background-size: cover;
       background-position: center;
-      padding-top: 3rem;
-  }
-  .solo, .friend, .smile {
-    background-color: transparent!important;
-  }
+}
+</style> 
 
-
-  .solo img{
-    height: 30rem;
-  }
-  .r1, .r2, .r3 {
-      margin-bottom: 3rem; 
-  }
-</style>

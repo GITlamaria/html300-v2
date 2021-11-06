@@ -2,26 +2,22 @@
     <div class="e-runners"> 
         
         <b-card class="race-card" 
-            :title="race.firstName + ' ' + race.lastName + ', ' + race.country"
-           
+            :title="race.firstName + ' ' + race.lastName + ', ' + race.country"  
         >
+            <!-- embed the ImageComponent -->
             <ImageComponent :img-data="race" />
             <div class="race-details">
-
                 <b-row>
                     <b-col>
-                        Race:  {{race.race}}
+                        Race:  {{race.race}}        <!-- bind to race prop in race object -->
                     </b-col>
                     <b-col>
-                        Time:  {{race.time}}
+                        Time:  {{race.time}}        <!-- bind to time prop in race object -->
                     </b-col>
                     <b-col>
-                        Year:  {{race.year}}
+                        Year:  {{race.year}}        <!-- bind to year prop in race object -->
                     </b-col>
-                
                 </b-row> 
-                <div>     
-                </div>
             </div>
         </b-card> 
     </div>
@@ -30,54 +26,23 @@
 
 <script>
 
+//import component
 import ImageComponent from './ImageComponent.vue'
 
 export default {
+    //set properties
     name: 'race',
     props: ['race'],
    
-
-
     //register component
     components: {
     ImageComponent,
     },
-
-    methods: {
-        
-    },
-
-    data() {
-        return {
-
-            // styleObject: {
-            //     color: 'red',
-            //     fontSize: '30px'
-            // }
-            // status: 'success'
-           
-        }
-    }
 }
 
 </script>
 
+<!-- link to global styles page -->
+<style src="@/assets/styles/appStyle.css" />
 
-
-<style scoped>
-    .race-details {
-        display: flex;
-        flex-direction: column;
-        color: #00008B;
-        border-top: 3px solid blue;
-        margin-bottom: 2rem;
-    }
-
-    .race-card {
-        background-color: white;
-        margin-top: 2rem;
-        color: #00008B;
-    }
-
-</style>
 

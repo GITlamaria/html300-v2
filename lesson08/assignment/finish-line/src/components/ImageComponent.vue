@@ -4,11 +4,8 @@
         <img class="image-component" 
         :class="[isActive ? 'blueBorder' : 'noBorder']"
         @click="toggleClass()"
-      
-    
         :src="imgData.src" 
-        :alt="imgData.alt" 
-
+        :alt="imgData.alt"
         >
             <div>
                 <h2>{{imgData.title}}</h2>
@@ -17,30 +14,21 @@
 </template>
 
 <script>
+
+//import border mixin
+import ApplyBorder from './mixins/border'
 export default {
     
-    data() {
-        return {
-           styleObject: {
-                color: 'red',
-                fontSize: '30px'
-            },
-            isActive: false
-        }
-    },
+    //use the mixin in this component
+    mixins: [ApplyBorder],
+    
+ 
     props: {
         imgData: {
             type: Object,
- 
         },
        
     },
-    methods: {
-        toggleClass: function(){
-            this.isActive = !this.isActive;
-    }
-            
-    }
 }
 </script>
 
