@@ -1,23 +1,18 @@
 <template>
  <b-container>
-     <b-jumbotron fluid header="Current Record Holders"></b-jumbotron>
-     
      <div class="row">
+       <!-- iterate through the races array -->
         <div class="col-md-6" v-for="race in races" :key="race.id" >
-            <!-- <Race v-bind:class="{alert: showAlert }" v-for="race in races" :key="race.id" :race="race" -->
-              <Race :race="race"
-        />
+              <!-- call the Race component -->
+              <Race :race="race" />
         </div>
-    
      </div>
-
-
   </b-container>
 </template>
 
 <script>
 
-// import Image from './Delete_Image.vue'
+// import component
 import Race from './Race.vue'
 
 export default {
@@ -25,11 +20,13 @@ export default {
 components: {
   Race,
 },
+props: {
+
+},
 
   data() {
     return {
-      /* array of objects */
-       
+      /* array of objects */      
        races: [
             {
               id: "1",
@@ -136,36 +133,13 @@ components: {
                 
             }
       ],
-      // showAlert: true
-
-
     }
   },
-
-  methods: {
-    
-
-    }
   }
 
 
 </script>
 
 <!-- link to stylesheet -->
-<!--style src="@/assets/styles/appStyle.css" /-->
-<style scoped>
-  .setBackground {
-    background: "blue";
-  }
-
-  button {
-    width: 4rem;
-    height: 2rem;
-  }
-  .row {
-        
-  }
-  
-</style>
-
+<style src="@/assets/styles/appStyle.css" />
 

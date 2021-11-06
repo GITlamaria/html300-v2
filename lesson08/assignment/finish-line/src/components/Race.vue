@@ -1,5 +1,5 @@
 <template>
-    <div > 
+    <div class="e-runners"> 
         
         <b-card class="race-card" 
             :title="race.firstName + ' ' + race.lastName + ', ' + race.country"
@@ -62,22 +62,22 @@ export default {
 
 </script>
 
-<style scoped>
-.race-details {
-    display: flex;
-    flex-direction: column;
-    color: blue;
-    border-top: 3px solid blue;
-}
-.card {
-    background-color: #f1f3eb; 
-    margin-top: 2rem;
 
-    /* padding: 2rem; */
-    
-}
-.race-details {
-    margin-bottom: 2rem;
-}
+
+<style scoped>
+    .race-details {
+        display: flex;
+        flex-direction: column;
+        color: #00008B;
+        border-top: 3px solid blue;
+        margin-bottom: 2rem;
+    }
+
+    .race-card {
+        background-color: white;
+        margin-top: 2rem;
+        color: #00008B;
+    }
 
 </style>
+

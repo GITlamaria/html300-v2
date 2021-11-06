@@ -1,8 +1,9 @@
 
+
 <template>
   <b-container fluid class="home">
     <b-row>
-      <b-col cols="3">
+      <b-col class="clubs" cols="3">
           <!-- Running Clubs - left pane -->
 
      <b-row>
@@ -35,51 +36,43 @@
    
       </b-col>
       <b-col cols="9" class="home-main">
-        <b-jumbotron header="Crossing the Finish Line!" />
         <b-row  class="r1">
           <b-col>
-            <b-card class="m text-left" :img-src="imageFriend" :img-alt="altFriend" img-right >
-              
+            <b-card class="friend" :img-src="imageFriend" :img-alt="altFriend" img-left rounded>
               <h3> {{ titleFriend }}</h3>
-              <p>
+              <b-card-body>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vel temporibus ducimus eligendi quos obcaecati eos earum quia saepe dolor delectus aut quas rem, quo veritatis? Veniam laborum, nam modi, tenetur velit alias dolorum incidunt dolor rem sed neque dicta ipsa eius amet atque eveniet iusto quod facere exercitationem laudantium.
-              </p>
+              </b-card-body>
             </b-card>
-
-            <h2> {{ friendTitle }}</h2>
-            <b-img v-bind="friendProps" rounded right>
-            </b-img>
           </b-col>
         </b-row>
+
         <b-row class="r2">
           <b-col>
-
-            <b-card :img-src="imageSolo" :img-alt="altSolo" img-left>
+            <b-card class="solo" :img-src="imageSolo" :img-alt="altSolo" img-right>
               <h3> {{ titleSolo }}</h3>
+              <b-card-body>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae quasi inventore dignissimos, repellat hic temporibus repudiandae laudantium fuga saepe praesentium ab porro, nisi, esse doloribus quas cumque. Eius quos doloribus suscipit enim veritatis fugiat tenetur quo! Ex labore voluptatem, voluptatum atque impedit illum error, reiciendis magnam et ullam a sint.
               </p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat maiores ea provident illo facilis consequatur incidunt cupiditate, inventore similique voluptates, sapiente laudantium eum commodi veritatis quae ipsum repellendus quisquam ipsa.
               </p>
+              </b-card-body>
             </b-card>
-            <!-- <h2>{{ soloTitle }}</h2>
-            <b-img v-bind="soloProps" rounded left>
-            </b-img> -->
           </b-col>
         </b-row>
+
         <b-row class="r3">
           <b-col>
-
-            <b-card :img-src="imageSmile" :img-alt="altSmile" img-center class="text-center">
+            <b-card class="smile" :img-src="imageSmile" :img-alt="altSmile" img-left>
               <h3> {{ titleSmile }}</h3>
+              <b-card-body>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolore eligendi quis, consectetur nesciunt, deserunt voluptas alias in accusantium soluta id nemo delectus veritatis autem architecto obcaecati porro quidem! Laboriosam inventore mollitia libero quaerat velit! Quis dolorum molestias doloribus vero libero, impedit repellat ipsam voluptas odit sunt quia atque a!
               </p>
+              </b-card-body>
             </b-card>
-            <!-- <h2>{{ funTitle }}</h2>
-            <b-img v-bind="funProps" rounded center>
-            </b-img> -->
           </b-col>
         </b-row>
       </b-col>
@@ -90,15 +83,16 @@
 <script>
 
 export default {
-  // name: 'Home',
+  
 
   components: {
-    // ImageComponent
+    
   },
   
   data() {
     return {
      
+
             titleFriend: "Bond With a Friend",
             altFriend: "2 people running",
             imageFriend:  require('../assets/images/run-friend.jpeg'),
@@ -152,5 +146,33 @@ export default {
 }
 </script>
 
-<!-- link to stylesheet  -->
-<style src="@/assets/styles/appStyle.css" />
+<!-- link to stylesheet 
+<style src="@/assets/styles/appStyle.css" /> -->
+
+<style scoped>
+
+  .clubs {
+    background-color: #9eb5c4;
+  }
+  .home {
+    color: #f3e230;
+  }
+  .home-main {
+      
+      background-image: url('../assets/images/main-content.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      padding-top: 3rem;
+  }
+  .solo, .friend, .smile {
+    background-color: transparent!important;
+  }
+
+
+  .solo img{
+    height: 30rem;
+  }
+  .r1, .r2, .r3 {
+      margin-bottom: 3rem; 
+  }
+</style>
