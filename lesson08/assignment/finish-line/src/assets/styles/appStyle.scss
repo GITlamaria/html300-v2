@@ -1,0 +1,33 @@
+.clubs {
+    background-color: #9eb5c4;
+  }
+
+  .home-main {
+      padding-top: 3rem;
+      color: #f3e230;
+  }
+
+  .solo, .friend, .smile {
+    background-color: transparent!important;
+  }
+
+  .solo img{
+    height: 30rem;
+  }
+  
+  .r1, .r2, .r3 {
+      margin-bottom: 3rem; 
+  }
+.race-details {
+    display: flex; 
+    flex-direction: column;
+    color: #00008B;
+    border-top: 3px solid blue;
+    margin-bottom: 2rem;
+}
+
+.race-card {
+    background-color: white;
+    margin-top: 2rem;
+    color: #00008B;
+}
